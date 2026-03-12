@@ -31,7 +31,7 @@ class Windows(Actions.GenericActions.GenericActions):
     def launch_ms_ppt(self):
         self.launch_app_with_search('Powerpoint')
         pg.sleep(10)
-        for _ in range(5):
+        for _ in range(4):
             pg.press('tab')
             pg.sleep(0.5)
         pg.typewrite(['enter'])
@@ -39,7 +39,7 @@ class Windows(Actions.GenericActions.GenericActions):
 
     def ms_ppt_actions(self):
         pg.press('f5')
-        for i in range(4):
+        for i in range(5):
             pg.press('space')
         pg.press('escape')
 
