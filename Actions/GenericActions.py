@@ -25,7 +25,11 @@ class GenericActions():
         pass
 
     @abstractmethod
-    def type_and_remove(self):
+    def qq_type_and_remove(self):
+        pass
+
+    @abstractmethod
+    def word_type_and_remove(self):
         pass
 
     @abstractmethod

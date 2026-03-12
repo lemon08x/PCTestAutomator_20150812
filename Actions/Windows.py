@@ -17,7 +17,11 @@ class Windows(Actions.GenericActions.GenericActions):
         pg.typewrite(kw, interval=0.05)
         pg.typewrite(['enter'])
 
-    def type_and_remove(self):
+    def qq_type_and_remove(self):
+        to_type = '[QQ] Hello! This is a test message for QQ chat. %s \n' % time.strftime('%Y-%m-%d %H:%M:%S')
+        pg.typewrite(to_type, interval=0.1)
+
+    def word_type_and_remove(self):
         to_type = 'Microsoft Word is the best IDE on this planet! %s \n' % time.strftime('%Y-%m-%d %H:%M:%S')
         pg.typewrite(to_type, interval=0.1)
 
@@ -30,8 +34,8 @@ class Windows(Actions.GenericActions.GenericActions):
 
     def launch_ms_ppt(self):
         self.launch_app_with_search('Powerpoint')
-        pg.sleep(10)
-        for _ in range(4):
+        pg.sleep(6)
+        for _ in range(3):
             pg.press('tab')
             pg.sleep(0.5)
         pg.typewrite(['enter'])
@@ -45,8 +49,8 @@ class Windows(Actions.GenericActions.GenericActions):
 
     def launch_ms_excel(self):
         self.launch_app_with_search('Excel')
-        pg.sleep(10)
-        for _ in range(4):
+        pg.sleep(6)
+        for _ in range(3):
             pg.press('tab')
             pg.sleep(0.5)
         pg.typewrite(['enter'])

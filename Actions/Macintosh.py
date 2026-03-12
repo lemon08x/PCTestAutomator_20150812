@@ -28,10 +28,13 @@ class Mac(Actions.GenericActions.GenericActions):
         pg.press('tab')
         pg.press('return')
 
-    def type_and_remove(self):
+    def qq_type_and_remove(self):
+        to_type = '[QQ] Hello! This is a test message for QQ chat. %s \n' % time.strftime('%Y-%m-%d %H:%M:%S')
+        pg.typewrite(to_type, interval=0.1)
+
+    def word_type_and_remove(self):
         to_type = 'Microsoft Word is the best IDE on this planet! %s \n' % time.strftime('%Y-%m-%d %H:%M:%S')
         pg.typewrite(to_type, interval=0.1)
-        # pg.typewrite(['backspace' for _ in range(len(to_type))], interval=0.1)
 
     def launch_ms_excel(self):
         self.launch_app_with_search('Microsoft Excel')

@@ -69,7 +69,7 @@ while True:
     # IM
     logging.info('Start IM')
     # a.qq_go_to_chat()
-    loop_until(start_time, a.type_and_remove, test_flag, (loop_start_m + 10) * 60)
+    loop_until(start_time, a.qq_type_and_remove, test_flag, (loop_start_m + 10) * 60)
     screenshot()
     logging.info('End IM')
 
@@ -88,7 +88,7 @@ while True:
     # Word
     logging.info('Starting MS Word.')
     a.launch_ms_word()
-    loop_until(start_time, a.type_and_remove, test_flag, (loop_start_m + 40) * 60)
+    loop_until(start_time, a.word_type_and_remove, test_flag, (loop_start_m + 40) * 60)
     screenshot()
     logging.info('End MS Word.')
 
